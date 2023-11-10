@@ -452,3 +452,11 @@ a {
 .bg-dark {
     background-color: #333333;
 }
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
