@@ -29,3 +29,24 @@ if (tabButtons.length > 0 && tabContents.length > 0) {
     });
 }
 
+// popup modal
+const modal = document.querySelector('.modal');
+const modalBtns = document.querySelectorAll('.modal-btn');
+const modalCloseBtn = document.querySelector('#close-modal');
+const docPreview = document.querySelector('#doc-preview');
+
+modalBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const dataSrc = btn.getAttribute('datasrc');
+        docPreview.setAttribute('src', dataSrc);
+
+        setTimeout(() => {
+            modal.classList.add('active');
+        }, 500);
+
+    });
+});
+
+modalCloseBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+});
